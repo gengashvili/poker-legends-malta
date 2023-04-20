@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
+import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import GlobalStyles from "./GlobalStyles";
 import FinalStage from "./pages/FinalStage";
@@ -17,6 +18,7 @@ function App() {
         <Route path="New-Year-Series" element={<NewyearSeries />} />
         <Route path="final-stage" element={<FinalStage />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
