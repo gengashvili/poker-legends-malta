@@ -9,41 +9,46 @@ export default function LeaderBoard() {
         <img src="/assets/example-icon.png" alt="example icon" />
       </Heading>
       <Board>
-        <tr>
-          <th>ადგილი</th>
-          <th>ვაუჩერი</th>
-          <th>პრიზი</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1 500 ₾</td>
-          <td>A კატეგორიის საგზური</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1 500 ₾</td>
-          <td>A კატეგორიის საგზური</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1 500 ₾</td>
-          <td>A კატეგორიის საგზური</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1 500 ₾</td>
-          <td>A კატეგორიის საგზური</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1 500 ₾</td>
-          <td>A კატეგორიის საგზური</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1 500 ₾</td>
-          <td>A კატეგორიის საგზური</td>
-        </tr>
+        <div>
+          <h6>ადგილი</h6>
+          <h6>
+            <img src="/assets/vaucheri.png" alt="vaucheri" />
+            ვაუჩერი
+          </h6>
+          <h6>პრიზი</h6>
+        </div>
+        <ul>
+          <li>
+            <p>1</p>
+            <p>1 500 ₾</p>
+            <p>A კატეგორიის საგზური</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>1 500 ₾</p>
+            <p>A კატეგორიის საგზური</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>1 500 ₾</p>
+            <p>A კატეგორიის საგზური</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>1 500 ₾</p>
+            <p>A კატეგორიის საგზური</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>1 500 ₾</p>
+            <p>A კატეგორიის საგზური</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>1 500 ₾</p>
+            <p>A კატეგორიის საგზური</p>
+          </li>
+        </ul>
       </Board>
     </Wrapper>
   );
@@ -51,8 +56,7 @@ export default function LeaderBoard() {
 
 const Wrapper = styled.div`
   margin: 15px 0 0 0;
-  color: #FFFFFF;
-
+  color: #ffffff;
 `;
 
 const Heading = styled.div`
@@ -69,22 +73,52 @@ const Heading = styled.div`
   }
 `;
 
-const Board = styled.table`
-  margin: 24px 15px;
-  tr {
-    text-align: left;
-    /* :not(:first-child){
-      color: red;
-    } */
+const Board = styled.div`
+  margin: 24px 16px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+    h6 {
+      font-size: 12px;
+      color: #7d7d7d;
+      display: flex;
+      align-items: center;
+      :last-child {
+        margin-right: 40px;
+      }
+      img {
+        width: 15px;
+        height: 10px;
+        margin-right: 4px;
+      }
+    }
   }
-  th,
-  td {
-    width: 33%;
-  }
-  th {
-    font-size: 12px;
-  }
-  td {
-    font-size: 10px;
+  ul {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e2122;
+      border-radius: 76px;
+      padding: 12px 20px 12px 13px;
+      border: 2px solid #2c3234;
+      :not(:first-child) {
+        margin-top: 6px;
+      }
+      p {
+        font-size: 10px;
+        :first-child {
+          border-radius: 50%;
+          background-color: #2c3234;
+          padding: 5px 9px;
+        }
+        :last-child {
+          width: 30%;
+          text-align: center;
+        }
+      }
+    }
   }
 `;
