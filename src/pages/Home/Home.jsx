@@ -4,9 +4,11 @@ import LeaderBoard from "../../Components/LeaderBoard";
 import Heading from "../../Components/Heading";
 import TicketsBoard from "./TicketsBoard";
 import LinkText from "../../Components/LinkText";
+import AdditionalInfoCont from "../../Components/AdditionalInfoCont";
 
 export default function Home() {
   return (
+    <>
     <Container>
       <Heading>
         <div className="line"></div>
@@ -18,6 +20,8 @@ export default function Home() {
       <TicketsBoard />
       <LinkText/>
     </Container>
+    <AdditionalInfoCont/>
+    </>
   );
 }
 

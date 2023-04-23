@@ -7,8 +7,11 @@ const Heading = styled.div`
   text-align: center;
   padding: 24px 0;
   position: relative;
+  color: #FFFFFF;
   h3 {
     font-size: 16px;
+    max-width: 70%;
+    margin: 0 auto;
   }
   .line {
     width: 125px;
