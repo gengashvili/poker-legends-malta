@@ -30,12 +30,17 @@ export default function Header() {
 
 const StyledHeader = styled.header`
   width: 100%;
+  color: #FFFFFF;
 `;
 const Wrapper = styled.div`
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  button{
+    color: #FFFFFF;
+  }
+
 `;
 const Logo = styled.img`
   width: 24px;

@@ -51,6 +51,8 @@ export default function LeaderBoard() {
 
 const Wrapper = styled.div`
   margin: 15px 0 0 0;
+  color: #FFFFFF;
+
 `;
 
 const Heading = styled.div`
@@ -71,6 +73,9 @@ const Board = styled.table`
   margin: 24px 15px;
   tr {
     text-align: left;
+    /* :not(:first-child){
+      color: red;
+    } */
   }
   th,
   td {
