@@ -1,13 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function LeaderBoard() {
+export default function LeaderBoard({ page }) {
   return (
     <Wrapper>
-      <Heading>
-        <h4>TOP20 ლიდერბორდი ჰოლდემში</h4>
-        <img src="/assets/example-icon.png" alt="example icon" />
-      </Heading>
+      {page === "home" ? (
+        <Heading>
+          <h4>TOP20 ლიდერბორდი ჰოლდემში</h4>
+          <img src="/assets/example-icon.png" alt="example icon" />
+        </Heading>
+      ) : (
+        <LBHeading>
+          <h4>ქულების დაგროვების მექანიკა</h4>
+          <img src="/assets/mechanic-icon.png" alt="mechanic icon" />
+        </LBHeading>
+      )}
+
       <Board>
         <div>
           <h6>ადგილი</h6>
@@ -120,5 +128,24 @@ const Board = styled.div`
         }
       }
     }
+  }
+`;
+
+const LBHeading = styled.div`
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: #1e2122;
+  border-radius: 76px;
+  border: 2px solid #2c3234;
+  h4 {
+    font-size: 13px;
+    margin: 0 20px;
+  }
+  img{
+    width: 38px;
+    height: 38px;
+    margin-right: -6px;
   }
 `;

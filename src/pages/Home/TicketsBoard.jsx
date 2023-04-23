@@ -10,12 +10,17 @@ export default function TicketsBoard() {
       </div>
       <div>
         <span className="line"></span>
-        <img src="/assets/travel-icon-sm.png" alt="airplane icon" />
-        <p>სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება The Festival in Malta-ს საგზური</p>
+        <img src="/assets/ticket-icon-sm.png" alt="ticket icon" />
+        <p>
+          სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება The
+          Festival in Malta-ს საგზური
+        </p>
       </div>
       <div>
         <span className="line"></span>
-        <img src="/assets/travel-icon-sm.png" alt="airplane icon" />
+        <div className="img">
+          <img src="/assets/vaucheri.png" alt="vaucheri icon" />
+        </div>
         <p>„ალტას“ ვაუჩერი</p>
       </div>
     </StyledBoard>
@@ -36,6 +41,7 @@ const StyledBoard = styled.div`
     :not(:first-child) {
       margin-top: 10px;
     }
+
     img {
       width: 37px;
       height: 35px;
@@ -52,5 +58,21 @@ const StyledBoard = styled.div`
       transform: translatey(-50%);
       box-shadow: 0px 0px 10px #ef5a21;
     }
+
+    .img {
+      width: 37px;
+      height: 35px;
+      margin: 0 8px 0 15px;
+      background-color: rgba(84, 87, 88, 0.4);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 25px;
+        height: 16px;
+      }
+    }
+
   }
 `;
