@@ -9,7 +9,7 @@ export default function FinalStage() {
           <picture>
             <source
               media="(min-width: 1024px)"
-              srcset="/assets/festival-malta-bg.png"
+              srcSet="/assets/festival-malta-bg.png"
             />
             <img src="/assets/festival-malta-sm.png" alt="festival malta" />
           </picture>
@@ -21,6 +21,22 @@ export default function FinalStage() {
           <div>
             <span className="line"></span>
             15-დან 21 მაისის ჩათვლით მალტა პოკერის ფესტივალს უმასპინძლებს
+          </div>
+        </div>
+
+        <div className="categoriesWrapper">
+          <div className="categoryCard">
+            <div className="heading">
+              <span className="line"></span>
+              <h4>A კატეგორიის საგზურში შედის</h4>
+            </div>
+            <ul>
+              <li>A კატეგორიის საგზურში შედის</li>
+              <li>The Festival in Malta -ს მეინ ივენთის ბაი-ინი</li>
+              <li>Holdem ან Omaha ჰაიროლერ ტურნირის ბაი-ინი</li>
+              <li>სასტუმრო</li>
+              <li>€500 სახარჯი ფული</li>
+            </ul>
           </div>
         </div>
       </section>
