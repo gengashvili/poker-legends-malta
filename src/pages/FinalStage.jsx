@@ -31,11 +31,37 @@ export default function FinalStage() {
               <h4>A კატეგორიის საგზურში შედის</h4>
             </div>
             <ul>
-              <li>A კატეგორიის საგზურში შედის</li>
-              <li>The Festival in Malta -ს მეინ ივენთის ბაი-ინი</li>
-              <li>Holdem ან Omaha ჰაიროლერ ტურნირის ბაი-ინი</li>
-              <li>სასტუმრო</li>
-              <li>€500 სახარჯი ფული</li>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>ორმხრივი ავიაბილეთი</li>
+              <li><img src="/assets/final-item-hotel-icon.png" alt="icon"/>The Festival in Malta -ს მეინ ივენთის ბაი-ინი</li>
+              <li><img src="/assets/final-item-event-icon.png" alt="icon"/>Holdem ან Omaha ჰაიროლერ ტურნირის ბაი-ინი</li>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>სასტუმრო</li>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>€500 სახარჯი ფული</li>
+            </ul>
+          </div>
+          <div className="categoryCard">
+            <div className="heading">
+              <span className="line"></span>
+              <h4>A კატეგორიის საგზურში შედის</h4>
+            </div>
+            <ul>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>ორმხრივი ავიაბილეთი</li>
+              <li><img src="/assets/final-item-hotel-icon.png" alt="icon"/>The Festival in Malta -ს მეინ ივენთის ბაი-ინი</li>
+              <li><img src="/assets/final-item-event-icon.png" alt="icon"/>Holdem ან Omaha ჰაიროლერ ტურნირის ბაი-ინი</li>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>სასტუმრო</li>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>€500 სახარჯი ფული</li>
+            </ul>
+          </div>
+          <div className="categoryCard">
+            <div className="heading">
+              <span className="line"></span>
+              <h4>A კატეგორიის საგზურში შედის</h4>
+            </div>
+            <ul>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>ორმხრივი ავიაბილეთი</li>
+              <li><img src="/assets/final-item-hotel-icon.png" alt="icon"/>The Festival in Malta -ს მეინ ივენთის ბაი-ინი</li>
+              <li><img src="/assets/final-item-event-icon.png" alt="icon"/>Holdem ან Omaha ჰაიროლერ ტურნირის ბაი-ინი</li>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>სასტუმრო</li>
+              <li><img src="/assets/final-item-ticket-icon.png" alt="icon"/>€500 სახარჯი ფული</li>
             </ul>
           </div>
         </div>
@@ -63,12 +89,12 @@ const Container = styled.div`
       }
       div {
         position: relative;
-        background-color: #2C3234;
+        background-color: #2c3234;
         border-radius: 8px;
         font-size: 14px;
         font-weight: 900;
         max-width: 600px;
-        min-height:62px;
+        min-height: 62px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -83,6 +109,53 @@ const Container = styled.div`
           top: 50%;
           transform: translatey(-50%);
           box-shadow: 0px 0px 10px #ef5a21;
+        }
+      }
+    }
+    .categoriesWrapper {
+      .categoryCard {
+        margin: 20px 0;
+        background-color: #25292B;
+        border-radius: 14px;
+        padding-bottom: 8px;
+       
+        .heading {
+          position: relative;
+          background-color: #2C3234;
+          border-radius: 10px 10px 0 0;
+          text-align: center;
+          padding: 17px 0;
+          .line {
+            width: 100px;
+            height: 4px;
+            background-color: #ef5a21;
+            border-radius: 0 0 4px 4px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0px 0px 10px #ef5a21;
+          }
+          h4 {
+            font-size: 14px;
+            font-weight: 900;
+          }
+        }
+        ul{
+          padding: 0 12px;
+          li{
+            background-color: #1C1D1E;
+            border-radius: 10px;
+            margin: 3px 0;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            img{
+              margin-right: 12px;
+              width: 32px;
+              height: 32px;
+            }
+          }
         }
       }
     }
