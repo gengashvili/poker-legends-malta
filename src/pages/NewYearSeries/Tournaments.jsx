@@ -35,13 +35,12 @@ const Wrapper = styled.div`
   color: #fff;
   border-radius: 16px;
   text-align: center;
+  margin: 0 16px;
+  overflow: hidden;
   .heading {
     font-size: 16px;
     padding: 24px 0;
     font-weight: 900;
-  }
-  h4 {
-    font-size: 16px;
   }
 
   .line {
@@ -58,10 +57,16 @@ const Wrapper = styled.div`
 
   .middle-container {
     background-color: #171718;
-    padding: 15px 0 30px 0;
+    padding: 15px 0 50px 0;
     position: relative;
+    h4 {
+    font-size: 16px;
+    max-width: 80%;
+    margin: 14px auto;
+  }
 
     .timeBox {
+      margin: 0 auto;
       height: 32px;
       max-width: fit-content;
       display: flex;
@@ -88,6 +93,7 @@ const Wrapper = styled.div`
     .right {
       position: absolute;
       bottom: 0;
+      width: 119px;
     }
     .left {
       left: -10px;
@@ -99,6 +105,10 @@ const Wrapper = styled.div`
 
   .textWrapper {
     font-size: 14px;
+    p{
+      margin: 12px auto;
+      max-width: 88%;
+    }
     button {
       background-color: #F05A22;
       border-radius: 5px;
@@ -106,6 +116,7 @@ const Wrapper = styled.div`
       border: none;
       padding: 6.5px 18.5px;
       font-size: 15px;
+      margin-bottom: 22px;
     }
   }
 `;

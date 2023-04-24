@@ -6,6 +6,7 @@ import LeaderBoard from "../../Components/LeaderBoard";
 import LinkText from "../../Components/LinkText";
 
 import TicketsBoard from "../Home/TicketsBoard";
+import DailyTournaments from "./DailyTournaments";
 import Tournaments from "./Tournaments";
 
 export default function NewYearSeries() {
@@ -25,6 +26,7 @@ export default function NewYearSeries() {
           სატელიტები
         </Paragraph>
       </Wrapper>
+      <DailyTournaments/>
       <AdditionalInfoCont />
     </div>
   );
@@ -42,4 +44,5 @@ const Paragraph = styled.p`
   max-width: 80%;
   margin: 10px auto 18px auto;
   text-align: center;
+  padding-bottom: 20px;
 `;

@@ -26,6 +26,10 @@ export default function LeaderBoard({ page }) {
           <h6>პრიზი</h6>
         </div>
         <ul>
+          <span className="line">
+            <span className="redLine"></span>
+          </span>
+
           <li>
             <p>1</p>
             <p>1 500 ₾</p>
@@ -104,6 +108,25 @@ const Board = styled.div`
     }
   }
   ul {
+    position: relative;
+    .line {
+      width: 2px;
+      height: 100%;
+      background-color: rgba(44, 50, 52, 0.5);
+      border-radius: 2px;
+      position: absolute;
+      top: 0;
+      right: -7px;
+      .redLine {
+        width: 2px;
+        height: 54px;
+        background-color: #ef5a21;
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
     li {
       display: flex;
       justify-content: space-between;
@@ -143,7 +166,7 @@ const LBHeading = styled.div`
     font-size: 13px;
     margin: 0 20px;
   }
-  img{
+  img {
     width: 38px;
     height: 38px;
     margin-right: -6px;
