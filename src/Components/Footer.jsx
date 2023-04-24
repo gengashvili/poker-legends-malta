@@ -1,6 +1,22 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+const accordionData = [
+  {
+    title: "როდის იწყება და რა ფორმატით გაიმართება აქცია",
+    content: "Content for Item 1",
+  },
+  {
+    title: "როგორ მივიღო აქციაში მონაწილეობა?",
+    content: "Content for Item 2",
+  },
+  {
+    title: "სხვადასვა",
+    content: "Content for Item 3",
+  },
+];
+
 export default function Footer() {
   const [activeIndex, setActiveIndex] = useState(-1);
 
@@ -12,20 +28,6 @@ export default function Footer() {
     }
   };
 
-  const accordionData = [
-    {
-      title: "როდის იწყება და რა ფორმატით გაიმართება აქცია",
-      content: "Content for Item 1",
-    },
-    {
-      title: "როგორ მივიღო აქციაში მონაწილეობა?",
-      content: "Content for Item 2",
-    },
-    {
-      title: "სხვადასვა",
-      content: "Content for Item 3",
-    },
-  ];
   return (
     <StyledFooter>
       <Wrapper>
@@ -102,6 +104,7 @@ export default function Footer() {
 }
 const StyledFooter = styled.div`
   padding: 55px 0 220px 0;
+  color: #ffffff;
 `;
 
 const Wrapper = styled.div`
@@ -109,7 +112,6 @@ const Wrapper = styled.div`
 `;
 
 const Heading = styled.h4`
-  color: #ffffff;
   font-size: 16px;
   /* margin-bottom: 22px; */
 `;
