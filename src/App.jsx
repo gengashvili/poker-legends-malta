@@ -6,7 +6,7 @@ import Header from "./Components/Header";
 import GlobalStyles from "./GlobalStyles";
 import FinalStage from "./pages/FinalStage";
 import Home from "./pages/Home/Home";
-import NewYearSeries from "./pages/NewYearSeries/NewyearSeries";
+import NewYearSeries from "./pages/NewYearSeries/NewYearSeries";
 
 function App() {
   return (
