@@ -247,11 +247,18 @@ const Container = styled.div`
       }
     }
     .categoriesWrapper {
+      @media (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+      }
       .categoryCard {
         margin: 20px 0;
         background-color: #25292b;
         border-radius: 14px;
         padding-bottom: 8px;
+        @media (min-width: 1024px) {
+          width: 32%;
+        }
 
         .heading {
           position: relative;
@@ -322,12 +329,34 @@ const Container = styled.div`
       }
     }
     .wrapper {
+      @media (min-width: 1024px) {
+        padding: 20px;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: column;
+        grid-gap: 15px;
+      }
       .tournir {
         position: relative;
         background-color: #1e2122;
         border-radius: 12px;
         padding: 20px;
         margin: 10px 16px;
+        @media (min-width: 1024px){
+          margin: 0;
+          padding: 28px;
+          :nth-child(1),
+          :nth-child(2),
+          :nth-child(3) {
+            grid-row:span 2;
+          }
+          :nth-child(4),
+          :nth-child(5) {
+            grid-row:span 3;
+          }
+        }
+
         img {
           position: absolute;
           top: 0;
@@ -356,7 +385,7 @@ const Container = styled.div`
   .misticContainer {
     background-color: #25292b;
     border-radius: 14px;
-    padding-bottom:1px;
+    padding-bottom: 1px;
     margin-top: 24px;
     .heading {
       display: flex;
@@ -366,6 +395,9 @@ const Container = styled.div`
       padding: 25px 0;
       img {
         max-width: 80%;
+        @media(min-width: 1024px){
+          width: 460px;
+        }
       }
     }
     ul {
@@ -402,13 +434,16 @@ const Container = styled.div`
         }
         p {
           font-size: 12px;
+          @media(min-width: 1024px){
+            font-size: 14px;
+          }
           :first-child {
             border-radius: 50%;
             background-color: #2c3234;
             padding: 5px 9px;
           }
-          :last-child{
-            margin-left: 5px;
+          :last-child {
+            margin-left: 12px;
             max-width: 80%;
           }
         }

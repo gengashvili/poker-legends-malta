@@ -17,8 +17,10 @@ export default function Header() {
         <TextWrapper>
           <p>სლოტები</p>
           <p>10 სექტემბერი - 7 ნოემბერი</p>
+          <div className="xIcon">
+          <BsX />
+        </div>
         </TextWrapper>
-        <BsX className='xIcon'/>
       </LeaderBoard>
       <Headings>
         <h4>მოიპოვე 10 საგზურიდან ერთ-ერთი</h4>
@@ -38,6 +40,9 @@ export default function Header() {
           <p>Final Stage</p>
         </NavLink>
       </NavBar>
+      <PlayBtn>
+        <Button bg="#EF602A">ითამაშე</Button>
+      </PlayBtn>
     </StyledHeader>
   );
 }
@@ -71,6 +76,7 @@ const Button = styled.button`
   border-radius: 5px;
   margin-left: 3px;
   font-size: 15px;
+  color: #ffffff;
 `;
 const LeaderBoard = styled.div`
   @media (min-width: 1024px) {
@@ -79,17 +85,20 @@ const LeaderBoard = styled.div`
   img {
     width: 100%;
   }
-  .xIcon{
+  .xIcon {
     display: none;
-    @media (min-width: 1024px){
+    width: 940px;
+    svg{
+      border-radius: 50%;
+      background-color: #25292b;
+      width: 32px ;
+      height: 32px;
+    }
+    @media (min-width: 1024px) {
       display: block;
       position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: #25292B;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
+      left: calc(100% - 56px);
+      top: 14px;
     }
   }
 `;
@@ -98,12 +107,12 @@ const TextWrapper = styled.div`
   align-items: center;
   padding: 16px;
   @media (min-width: 1024px) {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #25292b;
-    border-radius: 35px;
-    padding: 7px 7px 7px 0;
+    position: fixed;
+    top: 36px;
+    width: 940px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
   }
   p {
     :first-child {
@@ -182,6 +191,32 @@ const NavBar = styled.nav`
           font-size: 16px;
         }
       }
+    }
+  }
+`;
+const PlayBtn = styled.div`
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #171718;
+  z-index: 10;
+  border-top: 4px solid #f05a22;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 14px 0;
+  button {
+    width: 134px;
+    height: 32px;
+  }
+  @media (min-width: 1024px) {
+    width: 940px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px 0 18px 0;
+    button {
+      width: 144px;
+      height: 36px;
     }
   }
 `;

@@ -58,48 +58,74 @@ const Wrapper = styled.div`
   margin: 24px 16px;
   color: #ffffff;
   font-weight: 900;
+  @media (min-width: 1024px) {
+    background-color: #171718;
+    border-radius: 16px;
+    padding: 20px;
+    border: #25292B 4px solid;
+  }
   h4 {
     font-size: 14px;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 19px auto;
   }
-
-  .card {
-    position: relative;
-    margin: 16px 0;
-    img {
-      width: 100%;
+  .cardsWrapper {
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
-    .textWrapper {
-      width: max-content;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      div {
-        :first-child {
-          span {
-            :first-child {
-              font-size: 14px;
-              margin-right: 24px;
-            }
-            :last-child {
-              font-size: 12px;
+    .card {
+      position: relative;
+      margin: 0;
+      @media (min-width: 1024px) {
+        :nth-child(1),:nth-child(2) {
+          width: 49%;
+          height: 104px;
+        }
+        :nth-child(3) {
+         width: 100%;
+         height: 104px;
+         margin:20px 0;
+         img{
+          height: 100%;
+         }
+        }
+      }
+      img {
+        width: 100%;
+      }
+      .textWrapper {
+        width: max-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        div {
+          :first-child {
+            span {
+              :first-child {
+                font-size: 14px;
+                margin-right: 24px;
+              }
+              :last-child {
+                font-size: 12px;
+              }
             }
           }
-        }
-        :last-child {
-          span {
-            :first-child {
-              font-size: 24px;
-              color: #ffbe00;
-              margin-right: 52px;
-            }
-            :last-child {
-              font-size: 14px;
-              background-color: #b78648;
-              border-radius: 15px 15px 0px 15px;
-              padding: 4px 12px;
+          :last-child {
+            span {
+              :first-child {
+                font-size: 24px;
+                color: #ffbe00;
+                margin-right: 52px;
+              }
+              :last-child {
+                font-size: 14px;
+                background-color: #b78648;
+                border-radius: 15px 15px 0px 15px;
+                padding: 4px 12px;
+              }
             }
           }
         }
@@ -112,7 +138,7 @@ const Wrapper = styled.div`
     background-color: #d7c860;
   }
 
-  p{
+  p {
     font-size: 14px;
   }
 `;

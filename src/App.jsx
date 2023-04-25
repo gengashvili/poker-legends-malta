@@ -10,7 +10,7 @@ import NewYearSeries from "./pages/NewYearSeries/NewyearSeries";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <GlobalStyles />
       <Header />
       <Routes>
@@ -19,7 +19,7 @@ function App() {
         <Route path="final-stage" element={<FinalStage />} />
       </Routes>
       <Footer/>
-    </>
+    </div>
   );
 }
 

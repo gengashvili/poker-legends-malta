@@ -97,6 +97,9 @@ const Board = styled.div`
       color: #7d7d7d;
       display: flex;
       align-items: center;
+      @media (min-width: 1024px) {
+        font-size: 14px;
+      }
       :last-child {
         margin-right: 40px;
       }
@@ -140,6 +143,9 @@ const Board = styled.div`
       }
       p {
         font-size: 10px;
+        @media (min-width: 1024px) {
+          font-size: 14px;
+        }
         :first-child {
           border-radius: 50%;
           background-color: #2c3234;

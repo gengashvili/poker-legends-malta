@@ -12,6 +12,13 @@ const GlobalStyles = createGlobalStyle`
   }
   body{
     background-color: #1C1D1E;
+    .App{
+      max-width: 500px;
+      margin: 0 auto;
+      @media (min-width: 720px){
+          max-width: 650px;
+      }
+    }
     @media(min-width: 1024px){
       position: relative;
       :before {
@@ -27,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
           opacity: 0.6;
           z-index: -1;
       } 
-      #root{
+      .App{
         background-color: #1C1D1E;
         max-width: 940px;
         height: 100vh;

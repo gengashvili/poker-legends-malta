@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function AdditionalInfoCont() {
   return (
     <StyledAdditionalInfoCont>
-    <div className="line"></div>
+      <div className="line"></div>
       <h3>
         დამატებით შედგება, ქეშგეიმის, ტურნირების და სპინ პოკერის 12 Side
         ლიდერბორდი
@@ -24,16 +24,27 @@ const StyledAdditionalInfoCont = styled.div`
   padding: 24px 0 16px 0;
   position: relative;
 
-  h3,p{
+  h3,
+  p {
     max-width: 75%;
     margin: 0 auto;
+    @media (min-width: 1024px){
+      max-width: 60%;
+      text-align: center;
+    }
   }
-  h3{
+  h3 {
     font-size: 16px;
     margin-bottom: 11px;
+    @media (min-width: 1024px){
+      font-size: 18px;
+    }
   }
-  p{
+  p {
     font-size: 12px;
+    @media (min-width: 1024px){
+      font-size: 15px;
+    }
   }
 
   .line {
