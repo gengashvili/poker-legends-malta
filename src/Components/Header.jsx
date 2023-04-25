@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { BsX } from "react-icons/bs";
 
 export default function Header() {
   return (
@@ -17,6 +18,7 @@ export default function Header() {
           <p>სლოტები</p>
           <p>10 სექტემბერი - 7 ნოემბერი</p>
         </TextWrapper>
+        <BsX className='xIcon'/>
       </LeaderBoard>
       <Headings>
         <h4>მოიპოვე 10 საგზურიდან ერთ-ერთი</h4>
@@ -49,6 +51,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 1024px) {
+    display: none;
+  }
   button {
     color: #ffffff;
   }
@@ -68,20 +73,48 @@ const Button = styled.button`
   font-size: 15px;
 `;
 const LeaderBoard = styled.div`
+  @media (min-width: 1024px) {
+    position: relative;
+  }
   img {
     width: 100%;
+  }
+  .xIcon{
+    display: none;
+    @media (min-width: 1024px){
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #25292B;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+    }
   }
 `;
 const TextWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 16px;
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #25292b;
+    border-radius: 35px;
+    padding: 7px 7px 7px 0;
+  }
   p {
     :first-child {
       background-color: #25292b;
       padding: 5px 10px;
       border-radius: 15px;
       font-size: 12px;
+      @media (min-width: 1024px) {
+        margin-left: 5px;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
     }
     :last-child {
       margin-left: 8px;
@@ -108,41 +141,44 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #2C3234;
+  background-color: #2c3234;
   border-radius: 8px;
   height: 77px;
-  a{
-    color: #FFFFFF;
+  @media (min-width: 1024px) {
+    margin: 35px 16px;
+  }
+  a {
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 8px;
     flex-direction: column;
     width: 33%;
-    p{
-      :first-child{
+    p {
+      :first-child {
         font-size: 10px;
         margin-bottom: 9px;
       }
-      :last-child{
+      :last-child {
         font-size: 12px;
         font-weight: 900;
       }
     }
   }
-  .active{
-    background-color: #EF5A21;
+  .active {
+    background-color: #ef5a21;
     /* width: 140px; */
     height: 90px;
     border-radius: 8px;
-    p{
-      :first-child{
+    p {
+      :first-child {
         font-size: 11px;
         /* margin-bottom: 9px; */
       }
-      :last-child{
+      :last-child {
         font-size: 14px;
-        @media(min-width: 1024px){
+        @media (min-width: 1024px) {
           font-size: 16px;
         }
       }

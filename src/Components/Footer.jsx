@@ -103,7 +103,7 @@ export default function Footer() {
   );
 }
 const StyledFooter = styled.div`
-  padding: 55px 0 220px 0;
+  padding: 55px  0;
   color: #ffffff;
 `;
 
@@ -165,6 +165,9 @@ const SlidItem = styled.div`
   border-radius: 5px;
   background-color: ${(props) => props.bg};
   white-space: normal;
+  @media(min-width: 1024px){
+    width: 233px;
+  }
   img {
     width: 100%;
     border-radius: 5px 5px 0 0;
