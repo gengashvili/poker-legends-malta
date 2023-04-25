@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Header() {
@@ -22,7 +23,18 @@ export default function Header() {
         <h5>მოხვდი პოკერის ფესტივალზე მალტაში</h5>
       </Headings>
       <NavBar>
-
+        <NavLink to="/">
+          <p>28 ოქტ. - 7 ნოემ.</p>
+          <p>Cash Games</p>
+        </NavLink>
+        <NavLink to="New-Year-Series">
+          <p>10 - 29 დეკ.</p>
+          <p>New Year Series</p>
+        </NavLink>
+        <NavLink to="final-stage">
+          <p>28 ოქტ. - 7 ნოემ.</p>
+          <p>Final Stage</p>
+        </NavLink>
       </NavBar>
     </StyledHeader>
   );
@@ -30,17 +42,16 @@ export default function Header() {
 
 const StyledHeader = styled.header`
   width: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
 `;
 const Wrapper = styled.div`
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  button{
-    color: #FFFFFF;
+  button {
+    color: #ffffff;
   }
-
 `;
 const Logo = styled.img`
   width: 24px;
@@ -81,18 +92,60 @@ const TextWrapper = styled.div`
 `;
 
 const Headings = styled.div`
-margin: 20px 16px;
-h4{
+  margin: 20px 16px;
+  h4 {
     font-size: 16px;
     margin-bottom: 14px;
-}
-h5{
+  }
+  h5 {
     font-size: 14px;
     opacity: 90%;
-}
-
-`
+  }
+`;
 
 const NavBar = styled.nav`
-
+  margin: 20px 16px 24px 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2C3234;
+  border-radius: 8px;
+  height: 77px;
+  a{
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    flex-direction: column;
+    width: 33%;
+    p{
+      :first-child{
+        font-size: 10px;
+        margin-bottom: 9px;
+      }
+      :last-child{
+        font-size: 12px;
+        font-weight: 900;
+      }
+    }
+  }
+  .active{
+    background-color: #EF5A21;
+    /* width: 140px; */
+    height: 90px;
+    border-radius: 8px;
+    p{
+      :first-child{
+        font-size: 11px;
+        /* margin-bottom: 9px; */
+      }
+      :last-child{
+        font-size: 14px;
+        @media(min-width: 1024px){
+          font-size: 16px;
+        }
+      }
+    }
+  }
 `;
