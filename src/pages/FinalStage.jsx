@@ -154,9 +154,51 @@ export default function FinalStage() {
           </div>
         </div>
         <div className="paragraphs">
-          <p>* თუ მოთამაშე მოიგებს ბეჭედს ორჯერ ან მეტჯერ, ის The Lord of the Rings ტურნირზემოხვდება ბეჭდების შესაბამისი რაოდენობის სტეკით</p>
-          <p>*ტურნირში მონაწილეობის მიღება შეუძლია ნებისმიერ მსურველს 165₾-იანი ბაი-ინის გადახდით.</p>
+          <p>
+            * თუ მოთამაშე მოიგებს ბეჭედს ორჯერ ან მეტჯერ, ის The Lord of the
+            Rings ტურნირზემოხვდება ბეჭდების შესაბამისი რაოდენობის სტეკით
+          </p>
+          <p>
+            *ტურნირში მონაწილეობის მიღება შეუძლია ნებისმიერ მსურველს 165₾-იანი
+            ბაი-ინის გადახდით.
+          </p>
         </div>
+      </section>
+
+      <section className="misticContainer">
+        <div className="heading">
+          <span className="line"></span>
+          <img src="/assets/mistic-key-icon.png" alt="mistic icon" />
+        </div>
+        <ul>
+          <span className="line">
+            <span className="redLine"></span>
+          </span>
+          <li>
+            <p>1</p>
+            <p>სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+          </li>
+          <li>
+            <p>1</p>
+            <p>სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+          </li>
+        </ul>
       </section>
     </Container>
   );
@@ -301,13 +343,75 @@ const Container = styled.div`
         }
       }
     }
-    .paragraphs{
+    .paragraphs {
       margin: 0 auto;
       max-width: 85%;
       text-align: center;
-      p{
+      p {
         font-size: 13px;
         margin-bottom: 10px;
+      }
+    }
+  }
+  .misticContainer {
+    background-color: #25292b;
+    border-radius: 14px;
+    padding-bottom:1px;
+    margin-top: 24px;
+    .heading {
+      display: flex;
+      justify-content: center;
+      background-color: #2c3234;
+      border-radius: 16px;
+      padding: 25px 0;
+      img {
+        max-width: 80%;
+      }
+    }
+    ul {
+      position: relative;
+      margin: 20px;
+      .line {
+        width: 2px;
+        height: 100%;
+        background-color: rgba(44, 50, 52, 0.5);
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        right: -7px;
+        .redLine {
+          width: 2px;
+          height: 54px;
+          background-color: #ef5a21;
+          border-radius: 2px;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+      li {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        background-color: #1e2122;
+        border-radius: 76px;
+        padding: 12px 20px 12px 13px;
+        border: 2px solid #2c3234;
+        :not(:first-child) {
+          margin-top: 6px;
+        }
+        p {
+          font-size: 12px;
+          :first-child {
+            border-radius: 50%;
+            background-color: #2c3234;
+            padding: 5px 9px;
+          }
+          :last-child{
+            margin-left: 5px;
+            max-width: 80%;
+          }
+        }
       }
     }
   }
